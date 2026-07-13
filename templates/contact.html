@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Pretty Trash</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="{{ url_for('index') }}">Home</a>
+    <a href="{{ url_for('shop') }}?category=accessories">Accessories</a>
+    <a href="{{ url_for('shop') }}?category=clothes">Clothes</a>
+    <a href="{{ url_for('shop') }}?category=shoes">Shoes</a>
+    <a href="{{ url_for('cart') }}">Cart</a>
+    <a href="{{ url_for('contact') }}">Contact</a>
+  </nav>
+
+  <h1>Contact Pretty Trash</h1>
+
+   <div class="contact-page">
+   <form id="contact-form" action="{{ url_for('contact') }}" method="POST" onsubmit="showPopup()">
+
+      <div class="row">
+        <input type="text"   name="name"  placeholder="Your Name"  required>
+        <input type="email"  name="email" placeholder="Your Email" required>
+      </div>
+
+      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+
+      <button type="submit" class="btn-send">Send</button>
+    </form>
+  </div>
+
+
+  
+  <script src="{{ url_for('static', filename='london.js') }}"></script>
+</body>
+</html>

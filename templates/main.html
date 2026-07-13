@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PRETTY TRASH.COM</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+ 
+
+  
+  <nav class="navbar">
+    <a href="{{ url_for('index') }}">Home</a>
+    <a href="{{ url_for('shop') }}?category=accessories">Accessories</a>
+    <a href="{{ url_for('shop') }}?category=clothes">Clothes</a>
+    <a href="{{ url_for('shop') }}?category=shoes">Shoes</a>
+    <a href="{{ url_for('cart') }}">Cart</a>
+    <a href="{{ url_for('contact') }}">Contact</a>
+  </nav>
+
+  <h1 class="glitter-text">Welcome to PRETTY TRASH</h1>
+
+
+
+  <div class="blinking-text">☆ TOO HOT FOR HIM ☆</div>
+
+  <p id="sales-text">SALES UP TO 35%</p>
+
+
+  <br>
+  <br>
+  <div class="brand-desc">
+  <p>
+    <strong>PRETTY TRASH</strong> — we were raised on glitter, gossip and girls who don’t give a fuck.<br>
+    Our fashion? Y2K rage, heartbreak couture and fake lashes that could cut your ex.<br>
+    <br>
+    Wear it if you’re too loud, too pink, too much. Just enough.
+  </p>
+</div>
+
+
+
+
+  
+  <script src="{{ url_for('static', filename='london.js') }}"></script>
+</body>
+</html>

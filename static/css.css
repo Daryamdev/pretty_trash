@@ -1,0 +1,110 @@
+body {
+    background-image: url("https://i.imgur.com/kIuOeAw.jpg"); /* временный фон, можно заменить */
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: rgba(255, 20, 147, 0.9);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px dotted deeppink;
+    text-shadow: 1px 1px black;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3em;
+    letter-spacing: 1px;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+nav a:hover {
+    text-shadow: 0 0 10px yellow;
+}
+
+#category-buttons {
+    margin: 30px 0;
+    text-align: center;
+}
+
+#category-buttons button {
+    background: hotpink;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#category-buttons button:hover {
+    background: deeppink;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.product {
+    background: rgba(255, 255, 255, 0.85);
+    border: 3px dashed hotpink;
+    border-radius: 10px;
+    padding: 15px;
+    width: 220px;
+    box-shadow: 0 0 10px rgba(255, 20, 147, 0.6);
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.product h3 {
+    margin: 10px 0 5px;
+}
+
+.product p {
+    font-size: 0.9em;
+    color: #444;
+}
+
+a, .btn {
+    background: deeppink;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+a:hover, .btn:hover {
+    background: mediumvioletred;
+}

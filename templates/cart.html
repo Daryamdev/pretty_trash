@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cart</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="{{ url_for('index') }}">Home</a>
+    <a href="{{ url_for('shop') }}?category=accessories">Accessories</a>
+    <a href="{{ url_for('shop') }}?category=clothes">Clothes</a>
+    <a href="{{ url_for('shop') }}?category=shoes">Shoes</a>
+    <a href="{{ url_for('cart') }}">Cart</a>
+    <a href="{{ url_for('contact') }}">Contact</a>
+  </nav>
+
+  <h1>Your Cart</h1>
+
+  {% if cart %}
+  <div class="cart-container">
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Qty</th>
+          <th>Price</th>
+          <th>Subtotal</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in cart %}
+        <tr>
+          <td class="item-cell">
+            <div class="item-content">
+              <img src="{{ url_for('static', filename=item.image + '.jpg') }}" alt="{{ item.name }}" class="cart-img">
+              <div>{{ item.name }}</div>
+            </div>
+          </td>
+          <td>{{ item.quantity }}</td>
+          <td>{{ item.price }}€</td>
+          <td>{{ item.subtotal }}€</td>
+          <td>
+            <a href="{{ url_for('update_cart', product_id=item.id, action='plus') }}">➕</a>
+            <a href="{{ url_for('update_cart', product_id=item.id, action='minus') }}">➖</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    
+    <div class="cart-total" style="text-align: right; margin-top: 20px; font-size: 1.2rem; font-weight: bold; padding-right: 20px;">
+      Total: {{ total }}€
+    </div>
+  </div>
+
+  <div class="cart-buttons" style="text-align:center; margin-top:20px;">
+    <a href="{{ url_for('shop') }}" class="pink-btn">Back to shop</a>
+    <form action="{{ url_for('clear_cart') }}" method="post" style="display:inline;">
+      <button type="submit" class="pink-btn">Clear Cart</button>
+    </form>
+  </div>
+
+  {% else %}
+    <p style="text-align:center;">Your cart is empty.</p>
+  {% endif %}
+</body>
+</html>

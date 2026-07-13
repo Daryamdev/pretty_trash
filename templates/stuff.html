@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pretty Trash Shop</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="{{ url_for('index') }}">Home</a>
+    <a href="{{ url_for('shop') }}?category=accessories">Accessories</a>
+    <a href="{{ url_for('shop') }}?category=clothes">Clothes</a>
+    <a href="{{ url_for('shop') }}?category=shoes">Shoes</a>
+    <a href="{{ url_for('cart') }}">Cart</a>
+    <a href="{{ url_for('contact') }}">Contact</a>
+  </nav>
+<div class="product-container">
+  {% for product in products %}
+    <div class="product">
+      <img src="{{ url_for('static', filename=product.image ~ '.jpg') }}" alt="{{ product.name }}">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.description }}</p>
+      <p><strong>${{ product.price }}</strong></p>
+      <a href="{{ url_for('add_to_cart', product_id=product.id) }}">Add to Cart</a>
+    </div>
+  {% endfor %}
+</div>
+
+</body>
+</html>
