@@ -35,9 +35,11 @@ Follow these steps to run the application on your local machine:
 ```bash
 #Open a terminal in the root folder and run:
 
-#Create new enviroment:
-#Activate the enviroment:
-on Windows
+#Create virtual enviroment:
+python -m venv venv
+
+#Activate enviroment:
+#on Windows
 venv\Scripts\activate
 
 #on Linux/Mac
