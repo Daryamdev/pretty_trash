@@ -10,7 +10,7 @@ Here is a look inside the application architecture and UI:
 
 1. **Product Catalog Grid**
    Users can browse items dynamically sorted into distinct categories.
-   ![shop](3.png)
+   ![shop](9.png)
 
 2. **Synchronized Cart Terminal**
    Live updates of items, quantities, and the final total sum calculated strictly on the backend.
@@ -26,25 +26,29 @@ Here is a look inside the application architecture and UI:
 Follow these steps to run the application on your local machine:
 
 1. Clone the repository:
-   ```bash
+```bash
    git clone [https://github.com/Daryamdev/pretty_trash.git](https://github.com/Daryamdev/pretty_trash.git)
    cd pretty_trash
+```
 
+2. Setup and Run Backend
+```bash
+#Open a terminal in the root folder and run:
 
-2. Activate the enviroment:
-    on Windows
-    Bash 
-    venv\Scripts\activate
+ #Activate the enviroment:
+on Windows
+venv\Scripts\activate
 
-    on Linux/Mac
-    Bash
-    source venv/bin/activate 
+#on Linux/Mac
+source venv/bin/activate 
+```
+3. Install Dependencies
+```bash
+pip install -r requirements.txt
 
-3. Install Dependencies:
-    pip install -r requiremements.txt
+#Lounch the server:
+python shop.py
 
-4. Lounch the server:
-    python shop.py
-
-5. Access the application:
+#Access the application:
 (http://127.0.0.1:5000)
+```
