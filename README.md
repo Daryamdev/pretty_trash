@@ -41,12 +41,13 @@ venv\Scripts\activate
 
 #on Linux/Mac
 source venv/bin/activate 
-```
-3. Install Dependencies
-```bash
-pip install -r requirements.txt
 
-#Lounch the server:
+#Install Dependencies
+
+pip install -r requirements.txt
+```
+3. Lounch the server:
+```bash
 python shop.py
 
 #Access the application:
