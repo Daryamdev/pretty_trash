@@ -35,7 +35,8 @@ Follow these steps to run the application on your local machine:
 ```bash
 #Open a terminal in the root folder and run:
 
- #Activate the enviroment:
+#Create new enviroment:
+#Activate the enviroment:
 on Windows
 venv\Scripts\activate
 
